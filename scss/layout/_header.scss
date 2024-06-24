@@ -1,0 +1,15 @@
+.header{
+    @include flex();
+    padding: 17px 0 22.5px 0;
+}
+
+.logo{
+    width: 55px;
+    height: 55px;
+}
+
+.divider{
+    height: 30px;
+    width: 0.87px;
+    background-color: $color-light;
+}

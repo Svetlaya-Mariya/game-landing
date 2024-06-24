@@ -1,0 +1,13 @@
+.navigation{
+    @include flex($just-cont: center);
+    li{
+       padding: 0 24px;
+    }
+}
+
+.menu__additional{
+    @include flex();
+    li{
+        padding-left: 21px;
+    }
+}

@@ -1,0 +1,47 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    @extend %font-basic;
+    @include font (1.8rem, 2.2rem);
+    color: $color-light;
+}
+
+h1, h2{
+    @extend %font-add;
+    @include font (8rem, 8rem, 0.3rem);
+}
+
+h3{
+    @extend %font-add;
+    @include font (2.4rem, normal, 0.2rem);
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    @include font (1.2rem, normal, 0.14rem, $weight: 600);
+    &:hover{
+        cursor: pointer;
+        color: $color-additional;
+        @extend %transition;
+    }
+}
+
+button{
+    width: 260px;
+    height: 60px;
+    background: linear-gradient(0deg, $color-add-gradient 0%, $color-additional 100%);
+    border: none;
+    @include font (1.6rem, normal, 0, $weight: 600);
+    color: $color-dark-brown;
+    border-radius: 4px;
+}
+ 
+p{
+    @include font(1.2rem, 2.2rem, 0, $weight: 600)
+}
