@@ -20,11 +20,12 @@ h3{
 
 ul{
     padding: 0;
+    margin: 0;
 }
 
 li{
     list-style: none;
-    @include font (1.2rem, normal, 0.14rem, $weight: 600);
+    @include font (1.2rem, 1.7rem, 0.14rem, $weight: 600);
     &:hover{
         cursor: pointer;
         color: $color-additional;
@@ -43,5 +44,6 @@ button{
 }
  
 p{
-    @include font(1.2rem, 2.2rem, 0, $weight: 600)
+    @include font(1.8rem, 2.2rem, 0, $weight: 400);
+    word-spacing: 0rem;
 }

@@ -52,7 +52,7 @@
                     <span class="price">$14.99</span>
                 </button>
                 <div class="main-screen__scroll">
-                    <p>THE STORY</p>
+                    <p class="p__scroll">THE STORY</p>
                     <img src="assets/icons/scroll down.svg" alt="arrow-down">
                 </div>
             </div>
@@ -60,32 +60,39 @@
     </section>
     <main class="main">
         <section class="about-gallery">
-            <div class="wrapper">
-                <div class="heading">
-                    <h3>What is SOS?</h3>
-                    <h2>social battle royale game</h2>
-                    <div class="line"></div>
-                    <div class="about-game">
+            <div class="about-gallery__linear-gradient"></div>
+            <div class="about-gallery__radial-gradient"></div>
+            <div class="about-gallery__overlay"></div>
+            <div class="wrapper about-gallery__wrapper">
+                <div class="about">
+                    <div class="about__heading">
+                        <h3 class="about__head3">What is SOS?</h3>
+                        <h2 class="about__head2">social battle royale game</h2>
+                    </div>
+                    <hr class="line about__line"></hr>
+                    <div class="about__game">
                         <p>Each round, <b>you</b> and <b>15</b> other contestants compete to escape a deadly island filled with monsters. The trick is: <b>three</b> people can survive. Will you run solo or form friendships with others to escape?</p>
                         <p> Making the right decisions could be the
-                            difference between life and death.
+                            difference between <ins>life and death.</ins>
                         </p>
                     </div>
                 </div>
                 <div class="gallery">
-                    <div class="pictures">
-                        <img src="assets/image/image 1.png" alt="image1">
-                        <img src="assets/image/image 2.png" alt="image2">
-                        <img src="assets/image/image 3.png" alt="image3">
+                    <div class="gallery__wrapper">
+                        <ul class="gallery__images">
+                            <li class="image__item" data-pos="1"></li>
+                            <li class="image__item" data-pos="2"></li>
+                            <li class="image__item" data-pos="3"></li>
+                        </ul>
+                        <div class="gallery_scroll">
+                            <div class="dot dot_active"><div class="dot__line"></div></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
                     </div>
-                    <div class="gallery_scroll">
-                        <div class="dot"><div class="line"></div></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                    <div class="arrow-right">
+                    <div class="arrow__wrapper">
                         <img src="assets/icons/switch.svg" alt="switch">
                     </div>
                 </div>

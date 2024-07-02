@@ -15,21 +15,25 @@
     height: 100%;
     position: absolute;
     z-index: 1;
-    background: radial-gradient(circle, rgba(255,181,72,0) 0%, rgba(52,44,29,1) 73%, rgba(8,9,10,1) 100%);
+    background: radial-gradient(circle, rgba(255,181,72,0) 0%, rgba(52,44,29,0.8) 73%, rgba(8,9,10,1) 100%);
 }
 
 .main-screen__content{
-    padding-top: 241.7px;
+    padding-top: 250px;
     margin: auto;
     @include flex($direction: column);
 }
 
 .main-screen__head3{
-    padding: 8px 0 14px;
+    padding: 8px 0 18px;
 }
 
 .main-screen__scroll{
-    margin-top: 329px;
-    margin-bottom: 54.8px;
-    @include flex($direction: column)
+    margin-top: 325px;
+    margin-bottom: 50px;
+    @include flex($direction: column);
+    p{
+        padding-bottom: 5px;
+        font-size: 1.2rem;
+    }
 }

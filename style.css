@@ -5,6 +5,11 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -297,6 +302,10 @@ textarea {
   font: inherit; /* 2 */
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Interactive
    ========================================================================== */
 /*
@@ -349,8 +358,8 @@ h3, h1, h2 {
   font-family: "Bebas Neue", sans-serif;
 }
 
-.icons:hover, li:hover {
-  transition: all 0.5s;
+.arrow__wrapper:hover, .button, .icons:hover, li:hover {
+  transition: all 0.5s ease-in;
 }
 
 html {
@@ -384,12 +393,13 @@ h3 {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 li {
   list-style: none;
   font-size: 1.2rem;
-  line-height: normal;
+  line-height: 1.7rem;
   letter-spacing: 0.14rem;
   font-style: normal;
   font-weight: 600;
@@ -414,11 +424,12 @@ button {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   line-height: 2.2rem;
   letter-spacing: 0;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
+  word-spacing: 0rem;
 }
 
 .wrapper {
@@ -433,18 +444,12 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 17px 0 22.5px 0;
+  padding: 21px 0;
 }
 
 .logo {
   width: 55px;
   height: 55px;
-}
-
-.divider {
-  height: 30px;
-  width: 0.87px;
-  background-color: #FFFFFF;
 }
 
 .navigation {
@@ -487,6 +492,110 @@ p {
   background-color: #1A1917;
 }
 
+.button:hover {
+  border: 1px solid #FFFFFF;
+  background: #1A1917;
+  opacity: 0.5;
+  color: #FFFFFF;
+}
+
+.gallery {
+  width: 48.7%;
+  height: 608px;
+  position: relative;
+}
+
+.gallery__wrapper {
+  position: relative;
+  top: 0;
+}
+
+.gallery__images {
+  position: relative;
+  z-index: 4;
+  height: 608px;
+}
+
+.image__item {
+  position: absolute;
+  background-size: contain;
+}
+
+.image__item[data-pos="1"] {
+  width: 501px;
+  height: 608px;
+  background-image: url("assets/image/image 1.png");
+  z-index: 6;
+}
+
+.image__item[data-pos="2"] {
+  width: 438px;
+  height: 560px;
+  background-image: url("assets/image/image 2.png");
+  z-index: 5;
+  top: 24px;
+  right: 56px;
+}
+
+.image__item[data-pos="3"] {
+  width: 437px;
+  height: 512px;
+  background-image: url("assets/image/image 3.png");
+  z-index: 4;
+  top: 48px;
+  right: 30px;
+}
+
+.gallery_scroll {
+  position: absolute;
+  z-index: 9;
+  bottom: 25px;
+  left: 81px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 286px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  border: 2px solid #FFFFFF;
+}
+.dot:hover {
+  cursor: pointer;
+}
+
+.dot_active {
+  position: relative;
+  background: #FFFFFF;
+}
+
+.dot__line {
+  position: absolute;
+  z-index: 10;
+  top: 5px;
+  left: 13px;
+  height: 2px;
+  width: 32px;
+  border: none;
+  background: #FFFFFF;
+}
+
+.arrow__wrapper {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 6;
+}
+.arrow__wrapper:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .main-screen {
   background-image: url("assets/image/bg-image/bg-mainscreen.png");
   background-size: cover;
@@ -504,11 +613,11 @@ p {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: radial-gradient(circle, rgba(255, 181, 72, 0) 0%, rgb(52, 44, 29) 73%, rgb(8, 9, 10) 100%);
+  background: radial-gradient(circle, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.8) 73%, rgb(8, 9, 10) 100%);
 }
 
 .main-screen__content {
-  padding-top: 241.7px;
+  padding-top: 250px;
   margin: auto;
   display: flex;
   flex-wrap: nowrap;
@@ -518,17 +627,98 @@ p {
 }
 
 .main-screen__head3 {
-  padding: 8px 0 14px;
+  padding: 8px 0 18px;
 }
 
 .main-screen__scroll {
-  margin-top: 329px;
-  margin-bottom: 54.8px;
+  margin-top: 325px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+.main-screen__scroll p {
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.about-gallery {
+  background-image: url("assets/image/bg-image/bg-about.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.about-gallery__wrapper {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  padding-top: 201px;
+  padding-bottom: 151px;
+}
+
+.about {
+  width: 47.6%;
+  padding-top: 77px;
+}
+
+.about__heading {
+  padding-right: 150px;
+}
+
+.about__head2 {
+  padding: 14px 0;
+}
+
+.about__line {
+  width: 711px;
+  position: relative;
+  z-index: 8;
+}
+
+.about__game {
+  padding-left: 179px;
+  text-align: justify;
+}
+.about__game p {
+  padding-top: 25px;
+}
+
+ins {
+  text-decoration: underline solid #FFB548;
+  text-decoration-thickness: 6px;
+}
+
+.about-gallery__linear-gradient {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  height: 148px;
+  width: 100%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(15, 15, 15, 0) 100%);
+}
+
+.about-gallery__radial-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 61%, rgb(8, 10, 11) 100%);
+}
+
+.about-gallery__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #010101;
+  opacity: 22%;
 }
 
 /*# sourceMappingURL=style.css.map */

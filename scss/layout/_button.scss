@@ -1,0 +1,9 @@
+.button{
+    @extend %transition;
+    &:hover{
+        border: 1px solid $color-light;
+        background: $color-dark-brown ;
+        opacity: 0.5;
+        color: $color-light;
+    }
+}
